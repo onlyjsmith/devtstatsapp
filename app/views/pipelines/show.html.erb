@@ -1,0 +1,7 @@
+Other projects managed by <%= @leader %>
+
+<ul>
+<% @pipelines.each do |p| %>
+	<li><%= p.project.title %></li>
+<% end %>
+</ul>

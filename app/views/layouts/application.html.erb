@@ -7,9 +7,20 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-<h1>WCMC Development Pipeline Analysis</h1>
-<h2>Using data from January 2007 to October 2010 inclusive</h2>
+<div id="page">
+	<div id="header">
+		
+		<h1>WCMC Development Pipeline Analysis</h1>
+		<h2>Using data from January 2007 to October 2010 inclusive</h2>
+	</div>
+	<div id="content">
+		<div id="getting-started">
 <%= yield %>
-
+		</div>
+	</div>
+	<div id="sidebar">
+		<%= link_to "List all projects", projects_path %>
+	</div>
+</div>
 </body>
 </html>
