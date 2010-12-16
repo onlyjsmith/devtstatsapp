@@ -4,6 +4,6 @@ class AnalysisController < ApplicationController
   end
   
   def show_pipelines
-    log params
+    logger params
   end
 end

@@ -1,7 +1,9 @@
 Devtstatsapp::Application.routes.draw do
   match 'analysis/' => 'analysis#index'
   match 'build/' => 'build#index'
-  match 'project/' => 'analysis#index'
+  # match 'project/' => 'analysis#index'
+  
+  resources :projects
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

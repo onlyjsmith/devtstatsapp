@@ -1,0 +1,10 @@
+<%= link_to "List all projects", analysis_path %></p>
+<h3>Showing project pipeline detail</h3>
+<strong>Project  : </strong><%= Project.find(params[:id]).title %></p>
+<strong>Duration : </strong><%= @duration %> months</p>
+	<ul><% @pipelines.each do |pipeline| %>
+		<li><%= pipeline.year.to_s + "/" + pipeline.month.to_s  %>
+		<%= pipeline.month  %> Stafftime = <%= pipeline.stafftime  %></li>
+	<% end %>
+	</ul>
+
