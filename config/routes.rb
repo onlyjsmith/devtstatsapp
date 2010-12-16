@@ -1,9 +1,12 @@
 Devtstatsapp::Application.routes.draw do
+  match 'analysis/' => 'analysis#index'
+  match 'build/' => 'build#index'
+  match 'project/' => 'analysis#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
   # Sample of regular route:
-  #   match 'products/:id' => 'catalog#view'
+    # match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
 
   # Sample of named route:
