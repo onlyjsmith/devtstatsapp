@@ -131,8 +131,24 @@ a:hover {
 }
 #getting-started li {
   font-size: 14px;
-  color: #888;
+/*  color: #888;*/
   margin-bottom: 5px;
+}
+#getting-started .successful_project li  {
+  font-size: 14px;
+/*  color: #005950;*/
+/*  color: #507f5c;*/
+/*  color: #047878;*/
+  color: #23b843;
+
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+#getting-started .failed_project li  {
+  font-size: 14px;
+  color: #e51c37;
+  margin-bottom: 5px;
+  font-weight: bold;
 }
 #getting-started li h2 {
   margin: 0;

@@ -21,7 +21,9 @@
 	<div id="sidebar">
 		<ul>
 			<li><%= link_to "List all projects", projects_path %></li>
-			<li><%= link_to "List all staff", projects_path %></li>
+			<li><%= link_to "List all staff", :controller => 'pipelines', :action => 'unique_staff' %></li>
+			<li><%= link_to "List successful projects (1)", :controller => 'pipelines', :action => 'show_successes' %></li>
+			<li><%= link_to "List failed projects (F)", :controller => 'pipelines', :action => 'show_failures' %></li>
 		</ul>
 	</div>
 </div>

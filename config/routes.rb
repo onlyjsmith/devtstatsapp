@@ -2,6 +2,10 @@ Devtstatsapp::Application.routes.draw do
   # match 'analysis/' => 'analysis#index'
   match 'build/' => 'build#index'
   # match 'project/' => 'analysis#index'
+  match 'unique_staff/' => 'pipelines#unique_staff'
+  match 'pipelines/show_staff' => 'pipelines#show_staff'
+  match 'pipelines/show_successes' => 'pipelines#show_successes'
+  match 'pipelines/show_failures' => 'pipelines#show_failures'
   
   resources :projects
   resources :pipelines

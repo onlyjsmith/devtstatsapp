@@ -1,10 +1,15 @@
 <h3>Project pipeline detail</h3>
 <strong>Project : </strong><%= Project.find(params[:id]).title %></p>
 <strong>Duration : </strong><%= @duration %> months</p>
-<strong>Current Leader : </strong><%= link_to @pipelines.last.lead, :controller => 'pipelines', :action => 'show'%> (Stage: <%= @pipelines.last.stage %>)
-	<ul><% @pipelines.each do |pipeline| %>
+<strong>Current Leader : </strong><%= link_to @pipelines.last.lead, :controller => 'pipelines', :action => 'show_staff', :id => @pipelines.last.project_id%> (Latest stage: <%= @pipelines.last.stage %>)
+
+	<ul>
+	<% @pipelines.each do |pipeline| %>
+		<div class="<%= if pipeline.stage == '1' then "successful_project" elsif pipeline.stage == 'F' then "failed_project" else end %>">
 		<li><%= pipeline.year.to_s + "/" + pipeline.month.to_s  %>: 
-Stafftime = <%= number_to_currency(pipeline.stafftime, :unit => "&pound;", :separator => ".", :delimiter => ",", :precision => 0)  %> | Total budget = <%= number_to_currency(pipeline.budget, :unit => "&pound;", :separator => ".", :delimiter => ",", :precision => 0) %></li>
+Stafftime = <%= number_to_currency(pipeline.stafftime, :unit => "&pound;", :separator => ".", :delimiter => ",", :precision => 0)  %> | Total budget = <%= number_to_currency(pipeline.budget, :unit => "&pound;", :separator => ".", :delimiter => ",", :precision => 0) %> |
+Stage = <%= pipeline.stage %>
+		</li>
 	<% end %>
 	</ul>
 

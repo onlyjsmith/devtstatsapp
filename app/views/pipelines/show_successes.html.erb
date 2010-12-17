@@ -1,0 +1,8 @@
+<h3>Successful proposals</h3>
+<ul>
+<% @pipelines.each do |p| %>
+	<li><%= link_to "(#{p.project.number}) #{p.project.title}", project_path(p.project)%>
+	(<%= number_to_currency(p.stafftime, :unit => "&pound;", :separator => ".", :delimiter => ",", :precision => 0)  %>)
+	</li>
+<% end %>
+</ul>

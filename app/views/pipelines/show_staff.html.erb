@@ -1,0 +1,7 @@
+Other projects managed by <%= @leader %> (total of <%= @pipelines.count %>)
+
+<ul>
+<% @pipelines.each do |p| %>
+	<li><%= link_to p.project.title, project_path(p.project) %></li>
+<% end %>
+</ul>

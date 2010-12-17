@@ -1,0 +1,8 @@
+<h3>All staff</h3>
+<ul>
+<% @staff.each do |s| %>
+	<li>
+	<%= link_to s.lead, :controller => 'pipelines', :action => 'show_staff', :id => Pipeline.find_all_by_lead(s.lead).last.project_id %>
+	</li>
+<% end %>
+</ul>
