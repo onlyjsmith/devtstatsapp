@@ -1,6 +1,3 @@
 <h3>Project pipelines</h3>
-<ul>
-	<% @projects.each do |project| %>
-		<li><%= link_to "(#{project.number}) #{project.title}", project_path(project.id) %></li>
-	<% end %>
-</ul>
+<%# logger.info @projects %>
+<%= render :partial => "project_list", :locals => {:projects => @projects} %>

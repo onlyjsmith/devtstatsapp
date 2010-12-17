@@ -24,6 +24,8 @@
 			<li><%= link_to "List all staff", :controller => 'pipelines', :action => 'unique_staff' %></li>
 			<li><%= link_to "List successful projects (1)", :controller => 'pipelines', :action => 'show_successes' %></li>
 			<li><%= link_to "List failed projects (F)", :controller => 'pipelines', :action => 'show_failures' %></li>
+			</br></br>
+			<p><div class='successful_project'>Green text</div> indicates a successful project (stage 1).</p><p> <div class='failed_project'>Red text</div> indicates a failed project (stage F).</p><p>Blue text indicates no resolution (any other stage)</p>
 		</ul>
 	</div>
 </div>

@@ -20,6 +20,20 @@ a:hover {
   text-decoration: none;
 }
 
+.successful_project a  {
+  color: #23b843;
+}
+.successful_project {
+  color: #23b843;
+}
+
+.failed_project a  {
+  color: #e51c37;
+}
+
+.failed_project  {
+  color: #e51c37;
+}
 
 #page {
   background-color: #f0f0f0;
@@ -55,7 +69,7 @@ a:hover {
 
 
 #header {
-  background-image: url("images/rails.png");
+/*  background-image: url("images/rails.png");*/
   background-repeat: no-repeat;
   background-position: top left;
   height: 64px;
@@ -142,13 +156,13 @@ a:hover {
   color: #23b843;
 
   margin-bottom: 5px;
-  font-weight: bold;
+/*  font-weight: bold;*/
 }
 #getting-started .failed_project li  {
   font-size: 14px;
   color: #e51c37;
   margin-bottom: 5px;
-  font-weight: bold;
+/*  font-weight: bold;*/
 }
 #getting-started li h2 {
   margin: 0;
