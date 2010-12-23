@@ -1,0 +1,4 @@
+- @projects.each do |project|
+	%ul
+		%div{:class => "#{if project.pipelines.last.stage == "1" then "successful_project" elsif project.pipelines.last.stage == 'F' then "failed_project" end}"}
+			%li= link_to "(#{project.number}) #{project.title}", project_path(project.id)

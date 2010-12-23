@@ -4,7 +4,9 @@ gem 'rails', '3.0.3'
 # gem 'csv' # Not sure if this is needed
 gem 'awesome_print'
 # gem 'sparklines' # Unused for now, seems to require more installation of RMagick, etc
-gem 'ruby-debug19'
+# gem 'ruby-debug19'
+# gem 'newrelic_rpm'
+gem 'haml'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
